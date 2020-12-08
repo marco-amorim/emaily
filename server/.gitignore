@@ -114,6 +114,6 @@ dist
 .vscode-test
 
 # JS Files
-keys.js
+dev.js
 
 # End of https://www.toptal.com/developers/gitignore/api/node
