@@ -1,5 +1,5 @@
 function App() {
-	return <div className="App">Hello emaily!</div>;
+	return <a href="/auth/google">Login with Google</a>;
 }
 
 export default App;
