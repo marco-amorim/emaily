@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './components/App';
+import { Provider } from 'react-redux';
+import { applyMiddleware, createStore } from 'redux';
+
+const store = createStore(() => [], {}, applyMiddleware());
 
 ReactDOM.render(
-	<React.StrictMode>
+	<Provider store={store}>
 		<App />
-	</React.StrictMode>,
-	document.getElementById('root')
+	</Provider>,
+	document.querySelector('#root')
 );
