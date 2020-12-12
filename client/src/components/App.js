@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Dashboard from './Dashboard';
 import Landing from './Landing';
 
 const App = () => {
@@ -7,7 +8,8 @@ const App = () => {
 		<div>
 			<BrowserRouter>
 				<div>
-					<Route path="/" component={Landing} />
+					<Route path="/" exact component={Landing} />
+					<Route path="/surveys" component={Dashboard} />
 				</div>
 			</BrowserRouter>
 		</div>
