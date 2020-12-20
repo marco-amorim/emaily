@@ -14,7 +14,7 @@ module.exports = (app) => {
 			source: req.body.id,
 		});
 
-		req.user.credits += 5;
+		req.user.credits += charge.amount / 100;
 		const user = await req.user.save();
 
 		res.send(user);
