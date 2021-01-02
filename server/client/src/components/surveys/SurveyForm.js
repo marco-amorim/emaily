@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form';
@@ -48,9 +49,11 @@ class SurveyForm extends Component {
 function validate(values) {
 	const errors = {};
 
-	if (!values.surveyTitle) {
-		errors.surveyTitle = 'You must provide a title';
-	}
+	_.each(FIELDS, ({ name }) => {
+		if (!values[name]) {
+			errors[name] = 'You must provide a value';
+		}
+	});
 
 	return errors;
 }
