@@ -1,6 +1,6 @@
 # Emaily
 
-- Full stack application to send e-mails and handle payments using MongoDB + Express + React + Node (MERN)
+- Web application to collect feedback from e-mails and handle payments using MongoDB + Express + React + Node (MERN)
 
 ## Production Link
 
